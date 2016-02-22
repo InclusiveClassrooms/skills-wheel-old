@@ -3,6 +3,4 @@
   console.log('working');
 }());
 
-module.exports = test;
-
 },{}]},{},[1]);
