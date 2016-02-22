@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/tape ./test/*.js",
-    "cover": "istanbul cover ./node_modules/.bin/tape ./test/*.js"
+    "cover": "istanbul cover ./node_modules/.bin/tape ./test/*.js",
+    "build": "browserify src/** -o public/bundle.js"
   },
   "repository": {
     "type": "git",

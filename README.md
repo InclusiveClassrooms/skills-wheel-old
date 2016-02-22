@@ -26,8 +26,11 @@ We also hope to be able to integrate our work with the current Inclusive Classro
 | |-api.js
 |
 |-public
-| |-index.js
+| |-bundle.js
 | |-index.html
+|
+|-src
+| |-index.js
 |
 |-test
   |-index.test.js
