@@ -8,8 +8,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/tape ./test/*.js",
-    "cover": "istanbul cover ./node_modules/.bin/tape ./test/*.js",
-    "build": "browserify src/** -o public/bundle.js"
+    "cover": "istanbul cover ./node_modules/.bin/tape ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +21,6 @@
   },
   "homepage": "https://github.com/InclusiveClassrooms/skills-wheel#readme",
   "devDependencies": {
-    "browserify": "^13.0.0",
-    "istanbul": "^0.4.2",
-    "tape": "^4.4.0"
+    "istanbul": "^0.4.2"
   }
 }
