@@ -1,0 +1,27 @@
+{
+  "name": "skills-wheel",
+  "version": "1.0.0",
+  "description": "This is a dwyl project being taken on by @danwhy & @jbarget. We will be making a digital form of the Teaching Assistant's (TA) skills wheel created by Inclusive Classrooms. Our workflow will be represented in the issues we create/close and the labels we use.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/tape ./test/*.js",
+    "cover": "istanbul cover ./node_modules/.bin/tape ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InclusiveClassrooms/skills-wheel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InclusiveClassrooms/skills-wheel/issues"
+  },
+  "homepage": "https://github.com/InclusiveClassrooms/skills-wheel#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "tape": "^4.4.0"
+  }
+}
