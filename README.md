@@ -1,5 +1,3 @@
-# skills-wheel
-
 # Inclusive Classrooms Skills Wheel
 
 This is a @dwyl project being taken on by @danwhy & @jbarget.
