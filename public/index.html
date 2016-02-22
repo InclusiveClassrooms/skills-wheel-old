@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Form</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
-  crossorigin="anonymous">
+    crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 </head>
 
@@ -178,72 +178,163 @@
       </div>
       <h2>Verbal Communication</h2>
       <div>
-        <h3>Good Volume</h3>
-        <p>
-          Do they speak with good volume, i.e. not too loudly or quietly?
-        </p>
-        <h3>Good Pace</h3>
-        <p>
-          Do they speak with good pace, i.e. not too quickly or slowly?
-        </p>
-        <h3>Clarity</h3>
-        <p>
-          Is their speech clear to others?
-        </p>
-        <h3>Relevance</h3>
-        <p>
-          Do they always speak with relevance in a conversation?
-        </p>
-        <h3>Identifies 'Good Speaking Rules'</h3>
-        <p>
-          Are they able to identify how good speech sounds e.g. good volume, good pace, good clarity?
-        </p>
+        <div>
+          <h3>Good Volume</h3>
+          <p>
+            Do they speak with good volume, i.e. not too loudly or quietly?
+          </p>
+          <input type="radio" name="good-volume" value="always" />
+          <input type="radio" name="good-volume" value="sometimes" />
+          <input type="radio" name="good-volume" value="rarely" />
+          <input type="radio" name="good-volume" value="never" />
+        </div>
+        <div>
+          <h3>Good Pace</h3>
+          <p>
+            Do they speak with good pace, i.e. not too quickly or slowly?
+          </p>
+          <input type="radio" name="good-pace" value="always" />
+          <input type="radio" name="good-pace" value="sometimes" />
+          <input type="radio" name="good-pace" value="rarely" />
+          <input type="radio" name="good-pace" value="never" />
+        </div>
+        <div>
+          <h3>Clarity</h3>
+          <p>
+            Is their speech clear to others?
+          </p>
+          <input type="radio" name="clear-speech" value="always" />
+          <input type="radio" name="clear-speech" value="sometimes" />
+          <input type="radio" name="clear-speech" value="rarely" />
+          <input type="radio" name="clear-speech" value="never" />
+        </div>
+        <div>
+          <h3>Relevance</h3>
+          <p>
+            Do they always speak with relevance in a conversation?
+          </p>
+          <input type="radio" name="speak-with-relevance" value="always" />
+          <input type="radio" name="speak-with-relevance" value="sometimes" />
+          <input type="radio" name="speak-with-relevance" value="rarely" />
+          <input type="radio" name="speak-with-relevance" value="never" />
+        </div>
+        <div>
+          <h3>Identifies 'Good Speaking Rules'</h3>
+          <p>
+            Are they able to identify how good speech sounds e.g. good volume, good pace, good clarity?
+          </p>
+          <input type="radio" name="indentify-good-speech" value="always" />
+          <input type="radio" name="indentify-good-speech" value="sometimes" />
+          <input type="radio" name="indentify-good-speech" value="rarely" />
+          <input type="radio" name="indentify-good-speech" value="never" />
+        </div>
       </div>
       <h2>Planning and Problem Solving</h2>
       <div>
-        <h3>Thinks before Reacting</h3>
-        <p>
-          Do they always think before they react to a problem in school?
-        </p>
-        <h3>Identifies Problems</h3>
-        <p>
-          Do they understand when problems have occurred e.g. a fall out on the playground, an unforeseen change to timetabling, difficulties with peers’ friendships.
-        </p>
-        <h3>Identifies Examples of 'Good Problem Solving'</h3>
-        <p>
-          Can they identify situations in which problems were solved appropriately?
-        </p>
-        <h3>Devise a Plan to Solve a Problem</h3>
-        <p>
-          Can they make a plan to solve a problem that they’re involved in e.g. an approach to dealing with a change in timetabling?
-        </p>
-        <h3>Implement a Plan to Solve a Problem</h3>
-        <p>
-          Can they follow a plan that they have devised to solve a problem that they’re involved in?
-        </p>
+        <div>
+          <h3>Thinks before Reacting</h3>
+          <p>
+            Do they always think before they react to a problem in school?
+          </p>
+          <input type="radio" name="think-before-react" value="always" />
+          <input type="radio" name="think-before-react" value="sometimes" />
+          <input type="radio" name="think-before-react" value="rarely" />
+          <input type="radio" name="think-before-react" value="never" />
+        </div>
+        <div>
+          <h3>Identifies Problems</h3>
+          <p>
+            Do they understand when problems have occurred e.g. a fall out on the playground, an unforeseen change to timetabling, difficulties with peers’ friendships.
+          </p>
+          <input type="radio" name="understand-problems-occurred" value="always" />
+          <input type="radio" name="understand-problems-occurred" value="sometimes" />
+          <input type="radio" name="understand-problems-occurred" value="rarely" />
+          <input type="radio" name="understand-problems-occurred" value="never" />
+        </div>
+        <div>
+          <h3>Identifies Examples of 'Good Problem Solving'</h3>
+          <p>
+            Can they identify situations in which problems were solved appropriately?
+          </p>
+          <input type="radio" name="problems-solved-appropriately" value="always" />
+          <input type="radio" name="problems-solved-appropriately" value="sometimes" />
+          <input type="radio" name="problems-solved-appropriately" value="rarely" />
+          <input type="radio" name="problems-solved-appropriately" value="never" />
+
+        </div>
+        <div>
+          <h3>Devise a Plan to Solve a Problem</h3>
+          <p>
+            Can they make a plan to solve a problem that they’re involved in e.g. an approach to dealing with a change in timetabling?
+          </p>
+          <input type="radio" name="make-a-plan" value="always" />
+          <input type="radio" name="make-a-plan" value="sometimes" />
+          <input type="radio" name="make-a-plan" value="rarely" />
+          <input type="radio" name="make-a-plan" value="never" />
+        </div>
+        <div>
+          <h3>Implement a Plan to Solve a Problem</h3>
+          <p>
+            Can they follow a plan that they have devised to solve a problem that they’re involved in?
+          </p>
+          <input type="radio" name="follow-a-plan" value="always" />
+          <input type="radio" name="follow-a-plan" value="sometimes" />
+          <input type="radio" name="follow-a-plan" value="rarely" />
+          <input type="radio" name="follow-a-plan" value="never" />
+        </div>
       </div>
-      <h2>Relationships, Leaderships and Assertiveness</h2>
       <div>
-        <h3>Built and Maintained One Friendship</h3>
-        <p>
-          Do they have one school-based relationship with a peer that could be termed a friendship?
-        </p>
-        <h3>Built and Maintained Multiple Friendships</h3>
-        <p>
-          Do they have more than one school-based relationship with a peer that could be termed a friendship?
-        </p>
-        <h3>Express Thoughts and Feelings to Others</h3>
-        <p>
-          Are they able to tell others how they think and feel in an appropriate way in different situations?
-        </p>
-        <h3>Disagree with Others</h3>
-        <p>
-          Can they appropriately say that they disagree with others’ opinions?
-        </p>
-        <h3>Apologise Appropriately</h3>
-        <p>
-          Can they say sorry appropriately when it is expected of them?
-        </p>
+        <h2>Relationships, Leaderships and Assertiveness</h2>
+        <div>
+          <h3>Built and Maintained One Friendship</h3>
+          <p>
+            Do they have one school-based relationship with a peer that could be termed a friendship?
+          </p>
+          <input type="radio" name="built-one-friendship" value="always" />
+          <input type="radio" name="built-one-friendship" value="sometimes" />
+          <input type="radio" name="built-one-friendship" value="rarely" />
+          <input type="radio" name="built-one-friendship" value="never" />
+        </div>
+        <div>
+          <h3>Built and Maintained Multiple Friendships</h3>
+          <p>
+            Do they have more than one school-based relationship with a peer that could be termed a friendship?
+          </p>
+          <input type="radio" name="built-multiple-friendships" value="always" />
+          <input type="radio" name="built-multiple-friendships" value="sometimes" />
+          <input type="radio" name="built-multiple-friendships" value="rarely" />
+          <input type="radio" name="built-multiple-friendships" value="never" />
+        </div>
+        <div>
+          <h3>Express Thoughts and Feelings to Others</h3>
+          <p>
+            Are they able to tell others how they think and feel in an appropriate way in different situations?
+          </p>
+          <input type="radio" name="express-thoughts-to-others" value="always" />
+          <input type="radio" name="express-thoughts-to-others" value="sometimes" />
+          <input type="radio" name="express-thoughts-to-others" value="rarely" />
+          <input type="radio" name="express-thoughts-to-others" value="never" />
+        </div>
+        <div>
+          <h3>Disagree with Others</h3>
+          <p>
+            Can they appropriately say that they disagree with others’ opinions?
+          </p>
+          <input type="radio" name="disagree-with-others" value="always" />
+          <input type="radio" name="disagree-with-others" value="sometimes" />
+          <input type="radio" name="disagree-with-others" value="rarely" />
+          <input type="radio" name="disagree-with-others" value="never" />
+        </div>
+        <div>
+          <h3>Apologise Appropriately</h3>
+          <p>
+            Can they say sorry appropriately when it is expected of them?
+          </p>
+          <input type="radio" name="apologise-appropriately" value="always" />
+          <input type="radio" name="apologise-appropriately" value="sometimes" />
+          <input type="radio" name="apologise-appropriately" value="rarely" />
+          <input type="radio" name="apologise-appropriately" value="never" />
+        </div>
       </div>
     </div>
   </form>
