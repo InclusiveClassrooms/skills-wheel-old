@@ -1,3 +1,5 @@
+# skills-wheel
+
 # Inclusive Classrooms Skills Wheel
 
 This is a @dwyl project being taken on by @danwhy & @jbarget.
@@ -17,3 +19,18 @@ There are 3 parts to the project:
   - sending the data to a google spreadsheet
 
 We also hope to be able to integrate our work with the current Inclusive Classrooms website
+
+## File Structure
+```
+|-README.md
+|
+|-lib
+| |-api.js
+|
+|-public
+| |-index.js
+| |-index.html
+|
+|-test
+  |-index.test.js
+```
