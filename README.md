@@ -28,12 +28,10 @@ We also hope to be able to integrate our work with the current Inclusive Classro
 | |-api.js
 |
 |-public
-| |-bundle.js
-| |-index.html
-|
-|-src
 | |-index.js
+| |-index.html
 |
 |-test
   |-index.test.js
+  |-test.html
 ```
