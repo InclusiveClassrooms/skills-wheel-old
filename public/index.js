@@ -6,8 +6,10 @@ form.addEventListener('submit', function(e){
 });
 
 function getAnswers(form) {
-  return $(form).serializeArray().reduce(function(object,element){
+  var formAnswersObj = $(form).serializeArray().reduce(function(object,element){
     object[element.name] = element.value;
     return object;
   },{});
+  console.log(formAnswersObj);
+  return formAnswersObj;
 }

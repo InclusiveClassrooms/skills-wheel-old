@@ -33,4 +33,5 @@ We also hope to be able to integrate our work with the current Inclusive Classro
 |
 |-test
   |-index.test.js
+  |-test.html
 ```
