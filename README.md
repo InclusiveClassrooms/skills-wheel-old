@@ -1,6 +1,6 @@
 # Inclusive Classrooms Skills Wheel
 
-[![Build Status](https://travis-ci.org/InclusiveClassrooms/skills-wheel.svg?branch=master)](https://travis-ci.org/InclusiveClassrooms/skills-wheel)
+[![Circle CI](https://circleci.com/gh/InclusiveClassrooms/skills-wheel/tree/master.svg?style=shield)](https://circleci.com/gh/InclusiveClassrooms/skills-wheel/tree/master)
 
 This is a @dwyl project being taken on by @danwhy & @jbarget.
 We will be making a digital form of the Teaching Assistant's (TA) skills wheel created by Inclusive Classrooms. Our workflow will be represented in the issues we create/close and the labels we use.
@@ -28,8 +28,9 @@ We also hope to be able to integrate our work with the current Inclusive Classro
 | |-api.js
 |
 |-public
-| |-index.js
 | |-index.html
+| |-index.js
+| |-wheel.js
 |
 |-test
   |-index.test.js
