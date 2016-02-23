@@ -1,6 +1,8 @@
-QUnit.test('2 test', function(assert) {
+QUnit.test('selecting one of the radio buttons changes the value of data retrieved from the form', function(assert) {
   var some_element = document.getElementById('ta-form');
+
   var alwaysAppearanceOthers = document.getElementsByName('appearance-others');
+
   var node = Array.prototype.slice.call(alwaysAppearanceOthers).filter(function(el){
     return el.className === 'always';
   });
