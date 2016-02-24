@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html",
-    "cover": "istanbul cover phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html"
+    "cover": "istanbul cover phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html",
+    "start": "nodemon lib/server.js"
   },
   "repository": {
     "type": "git",
