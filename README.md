@@ -20,9 +20,20 @@ There are 3 parts to the project:
 
 We also hope to be able to integrate our work with the current Inclusive Classrooms website
 
+## Testing
+
+Tests are written with Qunit, and are being run on PhantomJS for continuous integration with Circle-CI. Code coverage is currently provided by blanketjs. We're working on getting this integrated with Circle.
+
+## The Wheel
+
+The Skills Wheel has been created using D3. All code for this is in `public/wheel.js` and is commented for clarity.
+
 ## File Structure
 ```
 |-README.md
+|-package.json
+|
+|-assets
 |
 |-lib
 | |-api.js
@@ -33,6 +44,7 @@ We also hope to be able to integrate our work with the current Inclusive Classro
 | |-wheel.js
 |
 |-test
+  |-blanket.js
   |-index.test.js
   |-test.html
 ```
