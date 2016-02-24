@@ -5,11 +5,12 @@ QUnit.begin(function( details ) {
     return el.className === 'always';
   });
 
+  $(node).trigger('click');
+  
   var event = document.createEvent('Event');
   event.initEvent('submit', true, true);
   taForm.dispatchEvent(event);
 
-  $(node).trigger('click');
 });
 
 QUnit.test('selecting one of the radio buttons changes the value of data retrieved from the form', function(assert) {
@@ -21,7 +22,7 @@ QUnit.test('selecting one of the radio buttons changes the value of data retriev
     answer:'3'
   }];
 
-  assert.deepEqual(actual, expected);
+  assert.deepEqual(actual, expected, "okay");
 });
 
 QUnit.test('submitting the form creates the wheel', function(assert) {
