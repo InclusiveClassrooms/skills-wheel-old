@@ -1,5 +1,5 @@
-QUnit.test('selecting one of the radio buttons changes the value of data retrieved from the form', function(assert) {
-  var some_element = document.getElementById('ta-form');
+QUnit.begin(function( details ) {
+  var taForm = document.getElementById('ta-form');
   var alwaysAppearanceOthers = document.getElementsByName('appearance-others');
   var node = Array.prototype.slice.call(alwaysAppearanceOthers).filter(function(el){
     return el.className === 'always';
@@ -7,14 +7,23 @@ QUnit.test('selecting one of the radio buttons changes the value of data retriev
 
   var event = document.createEvent('Event');
   event.initEvent('submit', true, true);
-  some_element.dispatchEvent(event);
+  taForm.dispatchEvent(event);
 
   $(node).trigger('click');
-  var actual = getAnswers(some_element);
+});
+
+QUnit.test('selecting one of the radio buttons changes the value of data retrieved from the form', function(assert) {
+  var taForm = document.getElementById('ta-form');
+
+  var actual = getAnswers(taForm);
   var expected = [{
     question:'appearance-others',
-    answer:'always'
+    answer:'3'
   }];
 
   assert.deepEqual(actual, expected);
+});
+
+QUnit.test('submitting the form creates the wheel', function(assert) {
+  assert.ok($('svg')[0].nodeName);
 });

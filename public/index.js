@@ -14,7 +14,6 @@ function getAnswers(form, callback) {
     array.push(obj);
     return array;
   },[]);
-  console.log(formAnswers);
   drawWheel(formAnswers);
   return formAnswers;
 }

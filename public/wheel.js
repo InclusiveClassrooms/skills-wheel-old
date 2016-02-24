@@ -124,7 +124,6 @@ function fillWheel(formAnswers){
 	formAnswers.forEach(function(elem, index){
     for (var i = 0; i<=elem.answer; i++){
       var target = (index + 1) + "-" + (i);
-      console.log(target);
       d3.select("#segment-"+target)
         .attr("fill", "#50B9A7");
     }
