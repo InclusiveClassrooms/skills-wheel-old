@@ -123,7 +123,7 @@ function drawWheel(formAnswers) {
 function fillWheel(formAnswers){
 	formAnswers.forEach(function(elem, index){
     for (var i = 0; i<=elem.answer; i++){
-      var target = (index + 1) + "-" + (i);
+      var target = (index - 5) + "-" + (i); // index has to be - 5 to account for the student details at the start of the form
       d3.select("#segment-"+target)
         .attr("fill", "#50B9A7");
     }
