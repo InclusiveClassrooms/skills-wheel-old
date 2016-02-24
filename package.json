@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html",
-    "cover": "istanbul cover ./node_modules/.bin/tape ./test/*.js"
+    "cover": "istanbul cover phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html"
   },
   "repository": {
     "type": "git",
