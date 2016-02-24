@@ -5,11 +5,16 @@ form.addEventListener('submit', function(e){
   getAnswers(e.target);
 });
 
-function getAnswers(form) {
-  var formAnswersObj = $(form).serializeArray().reduce(function(object,element){
-    object[element.name] = element.value;
-    return object;
-  },{});
-  console.log(formAnswersObj);
-  return formAnswersObj;
+function getAnswers(form, callback) {
+  var formAnswers = $(form).serializeArray().reduce(function(array ,element){
+    var obj = {
+      question:element.name,
+      answer:element.value
+    };
+    array.push(obj);
+    return array;
+  },[]);
+  console.log(formAnswers);
+  drawWheel(formAnswers);
+  return formAnswers;
 }
