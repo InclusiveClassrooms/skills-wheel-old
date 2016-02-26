@@ -17,14 +17,38 @@ QUnit.test('selecting one of the radio buttons changes the value of data retriev
   var taForm = document.getElementById('ta-form');
 
   var actual = getAnswers(taForm);
-  var expected = [{
-    question:'appearance-others',
-    answer:'3'
-  }];
+  var expected = [
+  {
+    "answer": "",
+    "question": "school"
+  },
+  {
+    "answer": "",
+    "question": "ta"
+  },
+  {
+    "answer": "",
+    "question": "student"
+  },
+  {
+    "answer": "",
+    "question": "school-year"
+  },
+  {
+    "answer": "",
+    "question": "group"
+  },
+  {
+    "answer": "",
+    "question": "date"
+  },
+  {
+    "answer": "3",
+    "question": "appearance-others"
+  }
+];
 
+  console.log($("body").html());
   assert.deepEqual(actual, expected, "okay");
-});
-
-QUnit.test('submitting the form creates the wheel', function(assert) {
-  assert.ok($('svg')[0].nodeName);
+  assert.ok(document.getElementById("wheel-svg"));
 });
