@@ -2,6 +2,7 @@ var test = require("tape");
 var shot = require("shot");
 var handler = require('../lib/handler.js');
 var equal = require('deep-equal');
+var fs = require('fs');
 
 test("testing the server gives a response", function(t){
   var request = {
@@ -11,7 +12,7 @@ test("testing the server gives a response", function(t){
 
   shot.inject(handler.handler, request, function(res){
     var actual = res.payload;
-    var expected = "nothing sent";
+    var expected = fs.readFileSync(__dirname + "/../public/index.html").toString();
     t.equal(actual, expected, "congrats, data sent to server");
     t.end();
   });
