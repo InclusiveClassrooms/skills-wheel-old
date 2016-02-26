@@ -6,7 +6,7 @@ QUnit.begin(function( details ) {
   });
 
   $(node).trigger('click');
-  
+
   var event = document.createEvent('Event');
   event.initEvent('submit', true, true);
   taForm.dispatchEvent(event);

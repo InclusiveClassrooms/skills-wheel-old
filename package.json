@@ -7,8 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html",
-    "cover": "istanbul cover phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html"
+    "frontTest": "phantomjs ./node_modules/qunit-phantomjs-runner/runner-list.js ./test/test.html",
+    "backTest": "tape ./test/server.test.js",
+    "test": "npm run frontTest && npm run backTest",
+    "cover": "istanbul cover ./test/server.test.js",
+    "start": "nodemon lib/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +24,15 @@
   },
   "homepage": "https://github.com/InclusiveClassrooms/skills-wheel#readme",
   "devDependencies": {
+    "deep-equal": "^1.0.1",
     "istanbul": "^0.4.2",
     "phantomjs": "^2.1.3",
     "qunit": "^0.9.0",
-    "qunit-phantomjs-runner": "^2.1.0"
+    "qunit-phantomjs-runner": "^2.1.0",
+    "shot": "^3.0.1",
+    "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "redis": "^2.4.2"
   }
 }
