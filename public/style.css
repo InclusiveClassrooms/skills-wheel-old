@@ -179,6 +179,10 @@ margin-top: 2em;
 margin-left: 1em;
 }
 
+.highlight{
+  opacity: 0.5;
+}
+
 /*.section:after {
     content: "";
     display: block;

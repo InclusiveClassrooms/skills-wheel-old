@@ -91,7 +91,7 @@ function drawWheel(formAnswers) {
       vis.attr("width", "500").attr("height", "500")
         .append("path")
         .attr("d", arc)
-        .attr("class", segmentClass)
+        .classed(segmentClass, true)
 				.attr("id", segmentID)
         .attr("fill", "transparent")
         .style("stroke", "#6D6D6B")
@@ -123,11 +123,13 @@ function drawWheel(formAnswers) {
 function fillWheel(formAnswers){
   var colours = ["fabb4d","e5007d","7f569f", "75bb49", "50b9a7", "009ee3"];
 	formAnswers.forEach(function(elem, index){
+    var questionClass = "segment-" + (index-6);
     var colour = colours[Math.floor((index-6)/5)];
     for (var i = 0; i<=elem.answer; i++){
       var target = (index - 5) + "-" + (i); // index has to be - 5 to account for the student details at the start of the form
       d3.select("#segment-"+target)
-        .attr("fill", "#" + colour);
+        .attr("fill", "#" + colour)
+        .classed(questionClass, true);
     }
 	});
   showWheel();
@@ -137,4 +139,16 @@ function showWheel(){
   wholeForm.addClass("hidden");
   pdfButton.removeClass("hidden");
   $("#new-form").removeClass("hidden");
+  highlightWheel();
+}
+
+function highlightWheel(){
+  $(".segment").on("mouseover", function(){
+    var value = this.className.baseVal.split(" ")[1];
+    $("."+ value).addClass("highlight");
+  });
+  $(".segment").on("mouseout", function(){
+    var value = this.className.baseVal.split(" ")[1];
+    $("."+ value).removeClass("highlight");
+  });
 }
