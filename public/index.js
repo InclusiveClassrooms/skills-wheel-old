@@ -20,7 +20,7 @@ newFormButton.addEventListener("click", function(e){
 });
 
 function sendRequest(url, formData){
-  request = $.ajax({
+  var request = $.ajax({
     url: url,
     type: "post",
     data: JSON.stringify(formData)
@@ -38,16 +38,4 @@ function getAnswers(form, callback) {
   },[]);
   drawWheel(formAnswers);
   return formAnswers;
-}
-
-document.getElementById('pdf').addEventListener('click', getPDF);
-
-function getPDF() {
-  var wheel = $('html').html();
-  console.log(wheel);
-  request = $.ajax({
-    url: "http://localhost:8000/pdf",
-    type: "post",
-    data: wheel
-  });
 }
