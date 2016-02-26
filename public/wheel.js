@@ -121,11 +121,13 @@ function drawWheel(formAnswers) {
 }
 
 function fillWheel(formAnswers){
+  var colours = ["fabb4d","e5007d","7f569f", "75bb49", "50b9a7", "009ee3"];
 	formAnswers.forEach(function(elem, index){
+    var colour = colours[Math.floor((index-6)/5)];
     for (var i = 0; i<=elem.answer; i++){
       var target = (index - 5) + "-" + (i); // index has to be - 5 to account for the student details at the start of the form
       d3.select("#segment-"+target)
-        .attr("fill", "#50B9A7");
+        .attr("fill", "#" + colour);
     }
 	});
   showWheel();
