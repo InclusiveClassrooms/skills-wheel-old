@@ -1,11 +1,29 @@
 var form = document.getElementById('ta-form');
+var wholeForm = $("#whole-form");
+var newFormButton = document.getElementById('new-form');
+var pdfButton  = $("#pdf");
 
 form.addEventListener('submit', function(e){
   e.preventDefault();
   getAnswers(e.target);
+  showWheel();
   sendRequest("http://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", $(form).serialize());
   sendRequest("http://localhost:8000/redis", $(form).serializeArray());
 });
+
+newFormButton.addEventListener("click", function(e){
+  wholeForm.removeClass("hidden");
+  pdfButton.addClass("hidden");
+  $("#new-form").addClass("hidden");
+  $("#wheel-svg").remove();
+  form.reset();
+});
+
+function showWheel(){
+  wholeForm.addClass("hidden");
+  pdfButton.removeClass("hidden");
+  $("#new-form").removeClass("hidden");
+}
 
 function sendRequest(url, formData){
   request = $.ajax({

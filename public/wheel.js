@@ -1,6 +1,6 @@
 function drawWheel(formAnswers) {
 
-  var vis = d3.select("body").append("svg");
+  var vis = d3.select("#wheel").append("svg").attr("id", "wheel-svg");
   var segmentClass;
   var textPathID;
 	var segmentID;
