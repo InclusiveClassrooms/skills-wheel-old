@@ -128,4 +128,11 @@ function fillWheel(formAnswers){
         .attr("fill", "#50B9A7");
     }
 	});
+  showWheel();
+}
+
+function showWheel(){
+  wholeForm.addClass("hidden");
+  pdfButton.removeClass("hidden");
+  $("#new-form").removeClass("hidden");
 }
