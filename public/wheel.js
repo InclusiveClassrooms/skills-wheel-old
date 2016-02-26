@@ -128,11 +128,24 @@ function fillWheel(formAnswers){
         .attr("fill", "#50B9A7");
     }
 	});
-  showWheel();
+  createPDF();
 }
 
 function showWheel(){
   wholeForm.addClass("hidden");
-  pdfButton.removeClass("hidden");
   $("#new-form").removeClass("hidden");
+}
+
+function createPDF(callback) {
+  var wheel = $('head').html() + '<body>' + $('#wheel').html() + '</body>';
+  var request = $.ajax({
+    url: "http://localhost:8000/pdf",
+    type: "post",
+    data: wheel
+  });
+  request.done(function(response){
+    console.log(response);
+    $('#pdf').removeClass("hidden");
+  });
+  showWheel();
 }

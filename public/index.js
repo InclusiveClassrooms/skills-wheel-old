@@ -21,7 +21,7 @@ newFormButton.addEventListener("click", function(e){
 });
 
 function sendRequest(url, formData){
-  request = $.ajax({
+  var request = $.ajax({
     url: url,
     type: "post",
     data: JSON.stringify(formData)
