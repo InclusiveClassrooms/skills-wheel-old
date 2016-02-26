@@ -1,6 +1,6 @@
 function drawWheel(formAnswers) {
 
-  var vis = d3.select("body").append("svg");
+  var vis = d3.select("#wheel").append("svg").attr("id", "wheel-svg");
   var segmentClass;
   var textPathID;
 	var segmentID;
@@ -128,4 +128,11 @@ function fillWheel(formAnswers){
         .attr("fill", "#50B9A7");
     }
 	});
+  showWheel();
+}
+
+function showWheel(){
+  wholeForm.addClass("hidden");
+  pdfButton.removeClass("hidden");
+  $("#new-form").removeClass("hidden");
 }
