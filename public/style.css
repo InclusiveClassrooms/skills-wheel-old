@@ -36,6 +36,11 @@ h3 {
 
 .all-details > input {
   margin-bottom: 1em;
+  border: none;
+  border-bottom: 0.1em solid #6d6d6b;
+  text-align: center;
+
+  /*padding-left: 2em;*/
 }
 
 .all-questions{
@@ -56,6 +61,12 @@ h3 {
 .heading {
   margin-top: 0;
   margin-bottom: 1.2em;
+}
+
+.glyphicon{
+  font-size: 0.8em;
+  padding-right: 0.5em;
+  float: right;
 }
 
 .one{
@@ -132,6 +143,7 @@ label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
   background-color: #ffbd28;
   border-radius: 50%;
   box-shadow: 10px 10px 5px #888888;
+  margin: 1.5em;
 }
 
 /*collapsing*/
@@ -155,6 +167,16 @@ label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
   margin-top: 1em;
   margin-left: 10%;
   margin-bottom: 0.1vh;
+}
+
+.wheel {
+  text-align: center;
+  width: 100%;
+ }
+
+.button {
+margin-top: 2em;
+margin-left: 1em;
 }
 
 /*.section:after {

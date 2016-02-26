@@ -6,7 +6,8 @@ var pdfButton  = $("#pdf");
 form.addEventListener('submit', function(e){
   e.preventDefault();
   getAnswers(e.target);
-  // showWheel();
+  $(".active").removeClass("active");
+  $(".section").addClass("collapsed");
   sendRequest("http://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", $(form).serialize());
   sendRequest("http://localhost:8000/redis", $(form).serializeArray());
 });
