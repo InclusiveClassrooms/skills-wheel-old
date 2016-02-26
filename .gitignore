@@ -40,3 +40,6 @@ evening.patch
 config.env
 stub/stub.patch
 .DS_Store
+
+# generated pdf
+public/skills-wheel.pdf
