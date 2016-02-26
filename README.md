@@ -22,16 +22,40 @@ We also hope to be able to integrate our work with the current Inclusive Classro
 
 ## Testing
 
-Tests are written with Qunit, and are being run on PhantomJS for continuous integration with Circle-CI. Code coverage is currently provided by blanketjs. We're working on getting this integrated with Circle.
+Frontend Tests are written with Qunit, and are being run on PhantomJS for continuous integration with Circle-CI. Backend tests are written with Tape. Code coverage is currently provided by blanketjs. We're working on getting this integrated with Circle.
+
+To see the coverage report for the frontend code, host a simple server in: `python -m SimpleHTTPServer` and go to _localhost:8000/test/test.html_
+Make sure the 'Enable Coverage' box is ticked.
 
 ## The Wheel
 
-The Skills Wheel has been created using D3. All code for this is in `public/wheel.js` and is commented for clarity.
+The Skills Wheel has been created using D3. All code for this is in _public/wheel.js_ and is commented for clarity.
+
+## Data
+
+When the form is submitted, the data is sent to a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1RFbpnk-ZoU87S_FiIphw74Y1cgz1dHyOMIvr0dJOzPQ/edit#gid=0) and a Redis database.
+
+#### Redis
+
+The redis database is structured as follows:
+```
+School: {
+  TA: {
+    Group: {
+      Student: {
+        Date: [{question, answer}...]
+      }
+    }
+  }
+}
+```
+This may need to be restructured in future sprints when the exact use of the data is finalised.
 
 ## File Structure
 ```
 |-README.md
 |-package.json
+|-circle.yml
 |
 |-assets
 |
@@ -44,7 +68,10 @@ The Skills Wheel has been created using D3. All code for this is in `public/whee
 | |-wheel.js
 |
 |-test
+  |-fixtures
+  |
   |-blanket.js
   |-index.test.js
+  |-server.test.js
   |-test.html
 ```
