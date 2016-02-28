@@ -44,11 +44,11 @@ test("the server handles errors correctly", function(t){
 
   shot.inject(handler.handler, request, function(res){
     var actual = res.payload;
-    var expected = "there has been an error";
-    t.equal(actual, expected, "congrats, data sent to server");
+    var expected = "There has been an error sending the data to the database.";
+    t.equal(actual, expected, "Error handled");
     t.end();
   });
-})
+});
 
 test('hash creation when TA is not in database', function(t){
   var details = require('./fixtures/details.js');
@@ -71,7 +71,67 @@ test('hash creation when TA is already in database', function(t){
   t.end();
 });
 
+test("A pdf is generated on request", function(t){
+  var request = {
+    method: 'POST',
+    url: '/pdf',
+    payload: '<head></head><body><h1>Test PDF</h1></body>'
+  }
+
+  shot.inject(handler.handler, request, function(res){;
+    t.equal(res.statusCode, 200, "congrats, pdf created");
+    t.end();
+  });
+});
+
+test("Error message is sent when pdf fails to generate", function(t){
+  var request = {
+    method: 'POST',
+    url: '/pdf',
+    simulate: {
+      error: true
+    }
+  }
+
+  shot.inject(handler.handler, request, function(res){
+    var actual = res.payload;
+    var expected = "There has been an error generating the PDF.";
+    t.equal(actual, expected, "Error handled");
+    t.end();
+  });
+})
+
+test('Static files are served', function(t){
+  var request = {
+    method: 'GET',
+    url: '/index.js',
+  }
+
+  shot.inject(handler.handler, request, function(res){;
+    t.deepEqual(res.rawPayload, fs.readFileSync(__dirname + '/../public/index.js'), "congrats, js file sent");
+    t.end();
+  });
+});
+
+test('Assets are served correctly', function(t){
+  var request = {
+    method: 'GET',
+    url: '/assets/face-always.svg',
+  }
+
+  shot.inject(handler.handler, request, function(res){;
+    t.deepEqual(res.rawPayload, fs.readFileSync(__dirname + '/../public/assets/face-always.svg'), "congrats, svg sent");
+    t.equal(res.headers['Content-Type'], 'image/svg+xml', "congrats, correct file type sent");
+    t.end();
+  });
+});
+
 test('teardown', function (t) {
+  if (process.env.REDISCLOUD_TEST) {
+    handler.client.flushdb();
+  } else {
+    console.log("Tests not running on test database");
+  }
   handler.client.end();
   t.end();
 })
