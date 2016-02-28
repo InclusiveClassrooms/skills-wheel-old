@@ -14,14 +14,14 @@ form.addEventListener('submit', function(e){
 
 newFormButton.addEventListener("click", function(e){
   wholeForm.removeClass("hidden");
-  pdfButton.addClass("hidden");
+  pdfButton.addClass("hidden inactive");
   $("#new-form").addClass("hidden");
   $("#wheel-svg").remove();
   form.reset();
 });
 
 function sendRequest(url, formData){
-  request = $.ajax({
+  var request = $.ajax({
     url: url,
     type: "post",
     data: JSON.stringify(formData)

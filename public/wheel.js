@@ -132,13 +132,26 @@ function fillWheel(formAnswers){
         .classed(questionClass, true);
     }
 	});
-  showWheel();
+  createPDF();
 }
 
 function showWheel(){
   wholeForm.addClass("hidden");
-  pdfButton.removeClass("hidden");
   $("#new-form").removeClass("hidden");
+  $('#pdf').removeClass("hidden");
+}
+
+function createPDF(callback) {
+  var wheel = $('head').html() + '<body>' + $('#wheel').html() + '</body>';
+  var request = $.ajax({
+    url: "https://inclusive-classrooms.herokuapp.com/pdf",
+    type: "post",
+    data: wheel
+  });
+  request.done(function(response){
+    $('#pdf').removeClass("inactive");
+  });
+  showWheel();
   highlightWheel();
 }
 
