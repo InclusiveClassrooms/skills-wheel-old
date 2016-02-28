@@ -184,6 +184,10 @@ margin-left: 1em;
   border-color: grey;
 }
 
+.highlight{
+  opacity: 0.5;
+}
+
 /*.section:after {
     content: "";
     display: block;
