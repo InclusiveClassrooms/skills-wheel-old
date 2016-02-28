@@ -144,7 +144,7 @@ function showWheel(){
 function createPDF(callback) {
   var wheel = $('head').html() + '<body>' + $('#wheel').html() + '</body>';
   var request = $.ajax({
-    url: "http://localhost:8000/pdf",
+    url: "https://inclusive-classrooms.herokuapp.com/pdf",
     type: "post",
     data: wheel
   });
