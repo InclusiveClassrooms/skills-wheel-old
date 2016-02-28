@@ -14,7 +14,7 @@ form.addEventListener('submit', function(e){
 
 newFormButton.addEventListener("click", function(e){
   wholeForm.removeClass("hidden");
-  pdfButton.addClass("hidden");
+  pdfButton.addClass("hidden inactive");
   $("#new-form").addClass("hidden");
   $("#wheel-svg").remove();
   form.reset();

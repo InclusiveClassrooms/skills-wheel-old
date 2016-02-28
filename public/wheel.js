@@ -134,6 +134,7 @@ function fillWheel(formAnswers){
 function showWheel(){
   wholeForm.addClass("hidden");
   $("#new-form").removeClass("hidden");
+  $('#pdf').removeClass("hidden");
 }
 
 function createPDF(callback) {
@@ -144,8 +145,7 @@ function createPDF(callback) {
     data: wheel
   });
   request.done(function(response){
-    console.log(response);
-    $('#pdf').removeClass("hidden");
+    $('#pdf').removeClass("inactive");
   });
   showWheel();
 }
