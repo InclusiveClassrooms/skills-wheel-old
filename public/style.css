@@ -111,13 +111,13 @@ header {
   padding: 1em;
 }
 .question {
-  margin-top: -1.9em;
+
   margin-left: 1em;
 }
 .answers {
   width: 50%;
   margin: auto;
-  margin-top: -2em;
+  /*margin-top: -2em;*/
 }
 label > input {
   /* HIDE RADIO */
@@ -149,12 +149,8 @@ label > input:checked + img {
   -webkit-filter: none;
   -moz-filter: none;
   filter: none;
-  width: 3em;
-  height: 3em;
-  background-color: #ffbd28;
+  background-color: rgba(234, 92, 55, 0.4);
   border-radius: 50%;
-  box-shadow: 10px 10px 5px #888888;
-  margin: 1.5em;
 }
 
 /*collapsing*/
