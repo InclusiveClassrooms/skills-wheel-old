@@ -21,6 +21,7 @@ newFormButton.addEventListener("click", function(e){
   pdfButton.addClass("hidden inactive");
   $("#new-form").addClass("hidden");
   $("#wheel-svg").remove();
+  $("#detail-text").remove();
   form.reset();
 });
 

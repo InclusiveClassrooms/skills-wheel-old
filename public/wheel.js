@@ -1,15 +1,28 @@
 function drawWheel(formAnswers) {
-
-  var vis = d3.select("#wheel").append("svg").attr("id", "wheel-svg");
+  var det = d3.select("#wheel-container").append("svg").attr("id", "detail-text").attr("class", "detail-text");
+  var vis = d3.select("#wheel-container").append("svg").attr("id", "wheel-svg");
   var segmentClass;
   var textPathID;
 	var segmentID;
   var faceImages = ["face-never.svg", "face-rarely.svg", "face-sometimes.svg", "face-always.svg"];
   var outerTextArray = ["SELF-AWARENESS & SELF-ESTEEM", "MANAGING FEELINGS", "NON-VERBAL COMMUNICATION", "VERBAL COMMUNICATION", "PLANNING & PROBLEM SOLVING", "RELATIONSHIPS, LEADERSHIP & ASSERTIVENESS"];
   var centre = 250;
+  var height = 500;
+  var width = 500;
   var arc;
 
   var oneSliceWidth = (360 * (Math.PI / 180) / 32); // converted from degrees to radians
+
+  var childDetails = ['Teaching Assistant', 'School', 'Student', 'School Year', 'Group', 'Date'];
+
+  formAnswers.forEach(function(el, index){
+    det.attr("width", 250).attr("height", 250)
+      .append("text")
+      .attr('x', 0)
+      .attr('y', 100 + index * 20)
+      .text(childDetails[index] + ':  ' + el.value)
+      .style("font-weight", "bold")
+  });
 
   // Draw the outer text in a circle
   for (var m = 0; m < 6; m++) {
@@ -19,7 +32,7 @@ function drawWheel(formAnswers) {
       .startAngle(((m * 5) + 1) * oneSliceWidth) // radians
       .endAngle(((m * 5) + 6) * oneSliceWidth); // radians
 
-    vis.attr("width", "500").attr("height", "500")
+    vis.attr("width", width).attr("height", height)
       .append("path")
       .attr("id", outerTextArray[m])
       .attr("d", textArc)
@@ -69,7 +82,7 @@ function drawWheel(formAnswers) {
             .startAngle(i * oneSliceWidth) // radians
             .endAngle((i + 1) * oneSliceWidth); // radians
 
-          vis.attr("width", "500").attr("height", "500")
+          vis.attr("width", width).attr("height", height)
             .append("path")
             .attr("d", numArc)
             .attr("id", textPathID)
@@ -88,7 +101,7 @@ function drawWheel(formAnswers) {
         }
       }
 
-      vis.attr("width", "500").attr("height", "500")
+      vis.attr("width", width).attr("height", height)
         .append("path")
         .attr("d", arc)
         .classed(segmentClass, true)
@@ -142,9 +155,9 @@ function showWheel(){
 }
 
 function createPDF(callback) {
-  var wheel = $('head').html() + '<body>' + $('#wheel').html() + '</body>';
+  var wheel = '<head><link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css"></head><body><header style="background-color: #E5007D; width: 100%; height: 4em;"><a href="http://inclusiveclassrooms.co.uk"><img class="home-link" src="../assets/inclusive-classrooms-300x126.png" alt="inclusive classrooms" height="100%"/></a></header>' +  $('#wheel-container').html() + '</body>';
   var request = $.ajax({
-    url: "https://inclusive-classrooms.herokuapp.com/pdf",
+    url: "http://localhost:8000/pdf",
     type: "post",
     data: wheel
   });

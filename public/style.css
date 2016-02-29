@@ -202,7 +202,11 @@ label > input:checked + img {
   height: 3.75em;
 }
 
-/*form validation*/
+.detail-text {
+  position: fixed;
+  top: 10em;
+  left: 5em;
+}
 
 .unanswered {
   -webkit-box-shadow: 0 0 5px 1px rgba(255, 0, 0, 1);
