@@ -30,11 +30,14 @@ h3 {
   border: 0.1em solid #6d6d6b;
   background-color: #FFF6FB;
   border-radius: 2px;
+  padding: 0.25em;
 }
 .row > input:focus {
   outline: 2px solid #FF65BB;
 }
 .label-row {
+  position: relative;
+  right: 1em;
   margin-top: 1em;
 }
 .all-questions {
