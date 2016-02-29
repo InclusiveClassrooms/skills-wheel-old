@@ -167,6 +167,7 @@ label > input:checked + img {
 }
 
 .heading:hover {
+  cursor: pointer;
   background-color: #E8E8E8;
 }
 .wheel {
