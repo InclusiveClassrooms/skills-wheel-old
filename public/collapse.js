@@ -3,32 +3,18 @@ var headingIdArr = ["#heading-one", "#heading-two", "#heading-three", "#heading-
 
 function hiddenToggle(headingId) {
   var section = "#section" + headingId.slice(8);
-  console.log(headingId);
-  // console.log(section);
-  $(".section").removeClass("active");
-  $(".section").addClass("collapsed");
-  $(section).addClass('active');
-  $(section).removeClass('collapsed');
 
-  $(".glyphicon").addClass("glyphicon-chevron-down");
-  $(".glyphicon").removeClass("glyphicon-chevron-up");
-  $(section + " .glyphicon").removeClass("glyphicon-chevron-down");
-  $(section + " .glyphicon").addClass("glyphicon-chevron-up");
-
-  document.getElementById(headingId).addEventListener('click', function(){
-    $(section).removeClass("active");
-    $(section).addClass("collapsed");
-  });
-}
-
-function collapseListener(section){
-  // document.querySelector(sectionId);
-  var heading = "#heading" + section.slice(8);
-  // heading.addEventListener("click", function(){
-  //   $(section)
-  // });
-  console.log(heading);
-  console.log(section);
+  if ($(section).hasClass("active")){
+    $(".section").removeClass("active");
+    $(".section").addClass("collapsed");
+    $(".glyphicon").addClass("glyphicon-chevron-down");
+    $(".glyphicon").removeClass("glyphicon-chevron-up");
+  } else {
+    $(section).addClass('active');
+    $(section).removeClass('collapsed');
+    $(section + " .glyphicon").removeClass("glyphicon-chevron-down");
+    $(section + " .glyphicon").addClass("glyphicon-chevron-up");
+  }
 }
 
 (function expandListener(){
