@@ -5,8 +5,8 @@ html, body{
 }
 
 h3 {
-    margin-top: 0.1em;
-    padding-left: 0.2em;
+  margin-top: 0.1em;
+  padding-left: 0.2em;
 }
 
 .hidden {
@@ -15,52 +15,68 @@ h3 {
 
 .whole-form{
   position: relative;
-  width: 90%;
-  margin-top: 5em;
-  margin-left: 5%;
-  border: solid #6d6d6b 0.2em;
+  width: 100%;
   border-radius: 3%;
   min-height: 70vh;
 }
 
-.all-inputs{
-  padding-top: 2%;
-
-}
-
 .all-details{
-  width: 96%;
-  margin-left: 2%;
+  background-color: rgba(229,0,125,0.1);
+  height: 20em;
   text-align: center;
+  padding: 2em;
+  width: 100%;
 }
 
 .all-details > input {
-  margin-bottom: 1em;
+  /*margin-bottom: 1em;*/
   border: none;
-  border-bottom: 0.1em solid #6d6d6b;
+  border: 0.1em solid #6d6d6b;
   text-align: center;
 
   /*padding-left: 2em;*/
 }
 
 .all-questions{
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.detail-label {
+  text-align: left;
+}
+
+.details-heading {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.questions-heading {
+  text-transform: uppercase;
 }
 
 .section{
   margin-top: 0.2em;
   background-color: white;
-  border: solid #6d6d6b 0.1em;
-  border-radius: 3%;
-  /*height: 40em;*/
+  border-bottom: solid #6d6d6b 0.1em;
+}
+
+header {
+  width: 100%;
+  height: 4em;
+  background-color: #E5007D;
 }
 
 .heading {
   margin-top: 0;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+}
+
+.home-link {
+  width: auto;
+  height: 100%;
+  margin-left: 5em;
 }
 
 .glyphicon{
@@ -149,9 +165,9 @@ label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
 /*collapsing*/
 
 .collapsed{
-  height: 2em;
+  height: 3em;
   overflow: hidden;
-  border-radius: 0.8em;
+  padding-top: 0.5em;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -160,23 +176,14 @@ label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
   background-color: #E8E8E8;
 }
 
-.submit {
-  position: absolute;
-  bottom: 0;
-  width: 80%;
-  margin-top: 1em;
-  margin-left: 10%;
-  margin-bottom: 0.1vh;
-}
-
 .wheel {
   text-align: center;
   width: 100%;
  }
 
 .button {
-margin-top: 2em;
-margin-left: 1em;
+  background-color: #ea5c37;
+  border-color: #ea5c37;
 }
 
 .inactive, .inactive:hover {
@@ -188,6 +195,10 @@ margin-left: 1em;
   opacity: 0.5;
 }
 
+.student-details {
+  /*width: 30%;*/
+  /*margin-right: 10em;*/
+}
 /*.section:after {
     content: "";
     display: block;
