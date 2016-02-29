@@ -195,6 +195,12 @@ label > input:checked + img { /* (RADIO CHECKED) IMAGE STYLES */
   opacity: 0.5;
 }
 
+.detail-text {
+  position: fixed;
+  top: 10em;
+  left: 5em;
+}
+
 .student-details {
   /*width: 30%;*/
   /*margin-right: 10em;*/
