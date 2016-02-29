@@ -3,13 +3,15 @@ var headingIdArr = ["#heading-one", "#heading-two", "#heading-three", "#heading-
 
 function hiddenToggle(headingId) {
   var section = "#section" + headingId.slice(8);
+  $(".glyphicon").addClass("glyphicon-chevron-down");
+  $(".glyphicon").removeClass("glyphicon-chevron-up");
 
   if ($(section).hasClass("active")){
-    $(".section").removeClass("active");
-    $(".section").addClass("collapsed");
-    $(".glyphicon").addClass("glyphicon-chevron-down");
-    $(".glyphicon").removeClass("glyphicon-chevron-up");
+    $(section).removeClass("active");
+    $(section).addClass("collapsed");
   } else {
+    $(".section").addClass("collapsed");
+    $(".section").removeClass("active");
     $(section).addClass('active');
     $(section).removeClass('collapsed');
     $(section + " .glyphicon").removeClass("glyphicon-chevron-down");
