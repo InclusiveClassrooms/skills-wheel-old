@@ -121,7 +121,7 @@ function drawWheel(formAnswers) {
 }
 
 function fillWheel(formAnswers){
-  var colours = ["fabb4d","e5007d","7f569f", "75bb49", "50b9a7", "009ee3"];
+  var colours = ["fabb4d","e5007d","672a99", "75bb49", "50b9a7", "009ee3"];
 	formAnswers.forEach(function(elem, index){
     var questionClass = "segment-" + (index-6);
     var colour = colours[Math.floor((index-6)/5)];
