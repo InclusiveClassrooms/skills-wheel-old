@@ -16,7 +16,7 @@ form.addEventListener('submit', function(e){
   if (allFilled()) {
     $('.required').addClass('hidden');
     getAnswers(e.target);
-    sendRequest("https://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", 'null=null&' + $(form).serialize());
+    sendRequest("https://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", 'null=null&' + $(form).serialize() + '&null=null');
     sendRequest("https://inclusive-classrooms.herokuapp.com/redis", $(form).serializeArray());
   }
 });
