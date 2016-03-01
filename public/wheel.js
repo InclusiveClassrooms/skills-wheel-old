@@ -158,7 +158,7 @@ function showWheel(){
 function createPDF(callback) {
   var wheel = '<head><link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css"></head><body><header style="background-color: #E5007D; width: 100%; height: 4em;"><a href="http://inclusiveclassrooms.co.uk"><img class="home-link" src="../assets/inclusive-classrooms-300x126.png" alt="inclusive classrooms" height="100%"/></a></header>' +  $('#wheel-container').html() + '</body>';
   var request = $.ajax({
-    url: "http://inclusive-classrooms.herokuapp.com/pdf",
+    url: "https://inclusive-classrooms.herokuapp.com/pdf",
     type: "post",
     data: wheel
   });
