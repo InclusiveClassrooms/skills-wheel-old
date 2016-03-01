@@ -1,16 +1,11 @@
-QUnit.begin(function( details ) {
-
-});
-
-QUnit.test('selecting one of the radio buttons changes the value of data retrieved from the form', function(assert) {
+QUnit.test('selecting all of the radio buttons changes the value of data retrieved from the form', function(assert) {
   var taForm = document.getElementById('ta-form');
 
-  var alwaysAppearanceOthers = document.getElementsByName('appearance-others');
-  var node = Array.prototype.slice.call(alwaysAppearanceOthers).filter(function(el){
-    return el.className === 'always';
-  });
+  var always = Array.prototype.slice.call(document.getElementsByClassName('always'));
 
-  $(node).trigger('click');
+  always.forEach(function(node){
+    $(node).trigger('click');
+  });
 
   var event = document.createEvent('Event');
   event.initEvent('submit', true, true);
@@ -18,37 +13,6 @@ QUnit.test('selecting one of the radio buttons changes the value of data retriev
 
 
   var actual = getAnswers(taForm);
-  var expected = [
-  {
-    "answer": "",
-    "question": "school"
-  },
-  {
-    "answer": "",
-    "question": "ta"
-  },
-  {
-    "answer": "",
-    "question": "student"
-  },
-  {
-    "answer": "",
-    "question": "school-year"
-  },
-  {
-    "answer": "",
-    "question": "group"
-  },
-  {
-    "answer": "",
-    "question": "date"
-  },
-  {
-    "answer": "3",
-    "question": "appearance-others"
-  }
-];
 
-  console.log($("body").html());
-  assert.deepEqual(actual, expected, "okay");
+  assert.equal(actual.length, 36, "okay");
 });
