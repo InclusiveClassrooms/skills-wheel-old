@@ -12,7 +12,7 @@ form.addEventListener('submit', function(e){
     $(".active").removeClass("active");
     $(".section").addClass("collapsed");
     sendRequest("https://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", $(form).serialize());
-    sendRequest("https://inclusive-classrooms.herokuapp/redis", $(form).serializeArray());
+    sendRequest("https://inclusive-classrooms.herokuapp.com/redis", $(form).serializeArray());
   }
 });
 
