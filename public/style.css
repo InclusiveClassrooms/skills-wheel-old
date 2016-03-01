@@ -198,8 +198,8 @@ label > input:checked + img {
   z-index: 100;
 }
 .tri-2 {
-  width: 3.75em;
-  height: 3.75em;
+  width: 3em;
+  height: 3em;
 }
 
 .detail-text {

@@ -15,7 +15,7 @@ function drawWheel(formAnswers) {
 
   var childDetails = ['Teaching Assistant',  'Student', 'School', 'School Year', 'Group', 'Date'];
   formAnswers.forEach(function(el, index){
-    if (index < 6){
+    if (index < 7 && index > 0){
       det.attr("width", 250).attr("height", 250)
       .append("text")
       .attr('x', 0)
@@ -137,10 +137,10 @@ function drawWheel(formAnswers) {
 function fillWheel(formAnswers){
   var colours = ["fabb4d","e5007d","672a99", "75bb49", "50b9a7", "009ee3"];
 	formAnswers.forEach(function(elem, index){
-    var questionClass = "segment-" + (index-6);
-    var colour = colours[Math.floor((index-6)/5)];
+    var questionClass = "segment-" + (index-7);
+    var colour = colours[Math.floor((index-7)/5)];
     for (var i = 0; i<=elem.answer; i++){
-      var target = (index - 5) + "-" + (i); // index has to be - 5 to account for the student details at the start of the form
+      var target = (index - 6) + "-" + (i); // index has to be - 5 to account for the student details at the start of the form
       d3.select("#segment-"+target)
         .attr("fill", "#" + colour)
         .classed(questionClass, true);
@@ -158,7 +158,7 @@ function showWheel(){
 function createPDF(callback) {
   var wheel = '<head><link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css"></head><body><header style="background-color: #E5007D; width: 100%; height: 4em;"><a href="http://inclusiveclassrooms.co.uk"><img class="home-link" src="../assets/inclusive-classrooms-300x126.png" alt="inclusive classrooms" height="100%"/></a></header>' +  $('#wheel-container').html() + '</body>';
   var request = $.ajax({
-    url: "http://localhost:8000/pdf",
+    url: "http://inclusive-classrooms.herokuapp.com/pdf",
     type: "post",
     data: wheel
   });
