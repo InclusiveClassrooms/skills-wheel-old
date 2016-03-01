@@ -67,7 +67,7 @@ function allFilled(){
 
   var allQuestions = questionsAnswered.filter(function(el){
     return typeof el !== 'string';
-  })
+  });
 
   if(detailsFilled.length === 6 && allQuestions.length === 30){
     return true;
