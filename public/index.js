@@ -2,7 +2,7 @@ var form = document.getElementById('ta-form');
 var wholeForm = $("#whole-form");
 var newFormButton = document.getElementById('new-form');
 var pdfButton  = $("#pdf");
-var questions = ["personal-appearance","appearance-others","likes","dislikes","strengths","identify-emotions-self","identify-emotions-others","bodily-reaction-emotions","identify-response-emotions","plan-respond-emotions","good-eye-contact","good-distance-touch","identify-expressions","body-language-self","body-language-others","good-volume","good-pace","clear-speech","speak-with-relevance","indentify-good-speech","think-before-react","understand-problems-occurred","problems-solved-appropriately","make-a-plan","follow-a-plan","built-one-friendship","built-multiple-friendships","express-thoughts-to-others","disagree-with-others","apologise-appropriately"];
+var questions = ["personal-appearance","appearance-others","likes","dislikes","strengths","identify-emotions-self","identify-emotions-others","bodily-reaction-emotions","identify-response-emotions","plan-respond-emotions","good-eye-contact","good-distance-touch","identify-expressions","body-language-self","body-language-others","good-volume","good-pace","clear-speech","speak-with-relevance","identify-good-speech","think-before-react","understand-problems-occurred","problems-solved-appropriately","make-a-plan","follow-a-plan","built-one-friendship","built-multiple-friendships","express-thoughts-to-others","disagree-with-others","apologise-appropriately"];
 
 form.addEventListener('submit', function(e){
   e.preventDefault();
