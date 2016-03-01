@@ -7,8 +7,8 @@ var questions = ["personal-appearance","appearance-others","likes","dislikes","s
 form.addEventListener('submit', function(e){
   e.preventDefault();
   $('.unanswered').removeClass('unanswered');
+  getAnswers(e.target);
   if (allFilled()) {
-    getAnswers(e.target);
     $(".active").removeClass("active");
     $(".section").addClass("collapsed");
     sendRequest("https://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", $(form).serialize());
