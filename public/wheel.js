@@ -16,7 +16,7 @@ function drawWheel(formAnswers) {
   var childDetails = ['Teaching Assistant',  'Student', 'School', 'School Year', 'Group', 'Date'];
   formAnswers.forEach(function(el, index){
     if (index < 6){
-      det.attr("width", 250).attr("height", 300)
+      det.attr("width", 250).attr("height", 250)
       .append("text")
       .attr('x', 0)
       .attr('y', 100 + index * 20)
