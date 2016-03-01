@@ -69,7 +69,7 @@ function allFilled(){
     return typeof el !== 'string';
   });
 
-  if(detailsFilled.length === 6 && allQuestions.length === 30){
+  if(answeredDetails.length === 6 && allQuestions.length === 30){
     return true;
   } else {
     unansweredDetails.forEach(function(el){
