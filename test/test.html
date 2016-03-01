@@ -13,765 +13,804 @@
 		<!--qunit testing -->
     <div id="qunit"></div>
     <div id="qunit-fixture">
-			<div id="whole-form" class="whole-form">
-		    <form id="ta-form">
-		      <div class="all-inputs">
-		        <div class="all-details">
-		          <input type="text" placeholder="School" name="school" class="student-details" />
-		          <input type="text" placeholder="Teaching Assistant" name="ta" class="student-details" />
-		          <input type="text" placeholder="Student's Name" name="student" class="student-details" />
-		          <input type="text" placeholder="School Year" name="school-year" class="student-details" />
-		          <input type="text" placeholder="Group Name" name="group" class="student-details" />
-		          <input type="month" name="date" id="date" class="student-details" />
-		          <label for="date">Month/Year</label>
-		        </div>
-		        <div id="all-questions" class="all-questions">
-		          <div id="section-one" class="section collapsed">
-		            <h3 class="heading one">Self Awareness & Self-Esteem</h3>
-		            <div class="question">
-		              <h4>Personal Appearance</h4>
-		              <h5>
-		                Are they able to identify at least three features of their personal appearance e.g. colour hair, colour eyes, height, clothing?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="personal-appearance" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="personal-appearance" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="personal-appearance" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="personal-appearance" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Appearance of Others</h4>
-		              <h5>
-		                Are they able to identify at least three features of others’ personal appearance e.g. colour hair, colour eyes, height, clothing?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="appearance-others" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="appearance-others" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="appearance-others" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="appearance-others" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Likes</h4>
-		              <h5>
-		                Can they identify at least three things that they like?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="likes" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="likes" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="likes" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="likes" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Dislikes</h4>
-		              <h5>
-		                Can they identify at least three things that they dislike?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="dislikes" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="dislikes" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="dislikes" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="dislikes" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Strengths</h4>
-		              <h5>
-		                Can they identify something that they feel they are good at?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="strengths" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="strengths" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="strengths" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="strengths" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		          </div>
-		          <div id="section-two" class="section collapsed">
-		            <h3 class="heading two">Managing Feelings</h3>
-		            <div class="question">
-		              <h4>Identify Emotions in Self</h4>
-		              <h5>
-		                Are they able to identify how they are feeling in different scenarios?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="identify-emotions-self" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-emotions-self" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-emotions-self" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-emotions-self" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identify Emotions in Others</h4>
-		              <h5>
-		                Are they able to identify how others might be feelings in different scenarios?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="identify-emotions-others" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-emotions-others" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-emotions-others" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-emotions-others" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Bodily Reactions to Emotions</h4>
-		              <h5>
-		                Can they explain how their body reacts when they feel different emotions e.g. when they are nervous their palms might sweat, they might go red, they might fidget?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="bodily-reaction-emotions" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="bodily-reaction-emotions" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="bodily-reaction-emotions" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="bodily-reaction-emotions" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identifies Appropriate Responses to Emotions</h4>
-		              <h5>
-		                Are they able to react appropriately to different emotions e.g. can they calm themselves down when they feel angry?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="identify-response-emotions" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-response-emotions" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-response-emotions" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-response-emotions" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Follow a Plan to Respond to Emotions</h4>
-		              <h5>
-		                Can they appropriately follow a plan that they make to deal with a certain emotion e.g. breathe, count to ten and then talk to someone if they feel angry?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="plan-respond-emotions" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="plan-respond-emotions" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="plan-respond-emotions" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="plan-respond-emotions" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		          </div>
-		          <div id="section-three" class="section collapsed">
-		            <h3 class="heading three">Non-Verbal Communication</h3>
-		            <div class="question">
-		              <h4>Good Eye Contact</h4>
-		              <h5>
-		                Do they follow the good eye contact rule when they talk to others?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="good-eye-contact" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-eye-contact" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-eye-contact" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-eye-contact" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Good Distance/Touch</h4>
-		              <h5>
-		                Do they display appropriate distance and touch when they speak to someone?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="good-distance-touch" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-distance-touch" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-distance-touch" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-distance-touch" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identify Facial Expressions</h4>
-		              <h5>
-		                Are they able to identify a range of different facial expressions in others?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="identify-expressions" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-expressions" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-expressions" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="identify-expressions" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identifies 'Good Body Language' in Self</h4>
-		              <h5>
-		                Can they identify when they are displaying good body language e.g. good distance, good touch and good eye contact?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="body-language-self" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="body-language-self" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="body-language-self" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="body-language-self" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identifies 'Good Body Language' in Others</h4>
-		              <h5>
-		                Can they identify when others are displaying good body language e.g. good distance, good touch and good eye contact?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="body-language-others" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="body-language-others" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="body-language-others" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="body-language-others" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		          </div>
-		          <div id="section-four" class="section collapsed">
-		            <h3 class="heading four">Verbal Communication</h3>
-		            <div class="question">
-		              <h4>Good Volume</h4>
-		              <h5>
-		                Do they speak with good volume, i.e. not too loudly or quietly?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="good-volume" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-volume" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-volume" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-volume" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Good Pace</h4>
-		              <h5>
-		                Do they speak with good pace, i.e. not too quickly or slowly?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="good-pace" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-pace" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-pace" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="good-pace" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Clarity</h4>
-		              <h5>
-		                Is their speech clear to others?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="clear-speech" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="clear-speech" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="clear-speech" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="clear-speech" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Relevance</h4>
-		              <h5>
-		                Do they always speak with relevance in a conversation?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="speak-with-relevance" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="speak-with-relevance" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="speak-with-relevance" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="speak-with-relevance" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identifies 'Good Speaking Rules'</h4>
-		              <h5>
-		                Are they able to identify how good speech sounds e.g. good volume, good pace, good clarity?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="indentify-good-speech" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="indentify-good-speech" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="indentify-good-speech" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="indentify-good-speech" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		          </div>
-		          <div id="section-five" class="section collapsed">
-		            <h3 class="heading five">Planning and Problem Solving</h3>
-		            <div class="question">
-		              <h4>Thinks before Reacting</h4>
-		              <h5>
-		                Do they always think before they react to a problem in school?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="think-before-react" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="think-before-react" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="think-before-react" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="think-before-react" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identifies Problems</h4>
-		              <h5>
-		                Do they understand when problems have occurred e.g. a fall out on the playground, an unforeseen change to timetabling, difficulties with peers’ friendships.
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="understand-problems-occurred" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="understand-problems-occurred" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="understand-problems-occurred" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="understand-problems-occurred" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Identifies Examples of 'Good Problem Solving'</h4>
-		              <h5>
-		                Can they identify situations in which problems were solved appropriately?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="problems-solved-appropriately" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="problems-solved-appropriately" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="problems-solved-appropriately" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="problems-solved-appropriately" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Devise a Plan to Solve a Problem</h4>
-		              <h5>
-		                Can they make a plan to solve a problem that they’re involved in e.g. an approach to dealing with a change in timetabling?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="make-a-plan" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="make-a-plan" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="make-a-plan" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="make-a-plan" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Implement a Plan to Solve a Problem</h4>
-		              <h5>
-		                Can they follow a plan that they have devised to solve a problem that they’re involved in?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="follow-a-plan" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="follow-a-plan" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="follow-a-plan" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="follow-a-plan" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		          </div>
-		          <div id="section-six" class="section collapsed">
-		            <h3 class="heading six">Relationships, Leaderships and Assertiveness</h3>
-		            <div class="question">
-		              <h4>Built and Maintained One Friendship</h4>
-		              <h5>
-		                Do they have one school-based relationship with a peer that could be termed a friendship?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="built-one-friendship" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="built-one-friendship" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="built-one-friendship" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="built-one-friendship" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Built and Maintained Multiple Friendships</h4>
-		              <h5>
-		                Do they have more than one school-based relationship with a peer that could be termed a friendship?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="built-multiple-friendships" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="built-multiple-friendships" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="built-multiple-friendships" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="built-multiple-friendships" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Express Thoughts and Feelings to Others</h4>
-		              <h5>
-		                Are they able to tell others how they think and feel in an appropriate way in different situations?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="express-thoughts-to-others" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="express-thoughts-to-others" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="express-thoughts-to-others" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="express-thoughts-to-others" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Disagree with Others</h4>
-		              <h5>
-		                Can they appropriately say that they disagree with others’ opinions?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="disagree-with-others" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="disagree-with-others" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="disagree-with-others" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="disagree-with-others" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		            <div class="question">
-		              <h4>Apologise Appropriately</h4>
-		              <h5>
-		                Can they say sorry appropriately when it is expected of them?
-		              </h5>
-		              <div class="answers">
-		                <label>
-		                  <input type="radio" name="apologise-appropriately" value="3" class="always" />
-		                  <img src="../assets/face-always.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="apologise-appropriately" value="2" class="sometimes" />
-		                  <img src="../assets/face-sometimes.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="apologise-appropriately" value="1" class="rarely" />
-		                  <img src="../assets/face-rarely.svg" />
-		                </label>
-		                <label>
-		                  <input type="radio" name="apologise-appropriately" value="0" class="never" />
-		                  <img src="../assets/face-never.svg" />
-		                </label>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-		      </div>
-		      <button class="btn btn-primary btn-block submit" type="submit">Submit</button>
-		    </form>
-		  </div>
-		  <div id="wheel" class="wheel"></div>
-		  <button id="new-form" class="hidden btn btn-info">Start Again</button>
-		  <button id="pdf" class="hidden btn btn-info">Download PDF</button>
+			<body>
+			  <header>
+			    <a href="http://inclusiveclassrooms.co.uk"><img class="home-link" src="./assets/inclusive-classrooms-300x126.png" alt="inclusive classrooms" /></a>
+			    <span class="triangle tri-1"></span>
+			  </header>
+			  <div id="whole-form" class="whole-form">
+			    <form id="ta-form">
+			      <div class="all-inputs">
+			        <div class="all-details container-fluid">
+			          <div class="row">
+			            <h2 class="details-heading col-md-offset-1"> <i class="material-icons heading-icon">face</i> General Information</h2>
+			          </div>
+			          <div class="row label-row">
+			            <label for="ta" class="col-md-offset-1 col-md-4 detail-label">Your Name</label>
+			            <label for="student" class="col-md-offset-2 col-md-4 detail-label">Child's Name</label>
+			          </div>
+			          <div class="row">
+			            <input type="text" name="ta" class="student-details col-md-offset-1 col-md-4"/>
+			            <input type="text" name="student" class="student-details col-md-offset-2 col-md-4" />
+			          </div>
+			          <div class="row label-row">
+			            <label for="school" class="col-md-offset-1 col-md-4 detail-label">School Name</label>
+			            <label for="school-year" class="col-md-offset-2 col-md-4 detail-label">Year</label>
+			          </div>
+			          <div class="row">
+			            <input type="text" name="school" class="student-details col-md-offset-1 col-md-4" />
+			            <input type="text" name="school-year" class="student-details col-md-offset-2 col-md-4" />
+			          </div>
+			          <div class="row label-row">
+			            <label for="group" class="col-md-offset-1 col-md-4 detail-label">Group Name</label>
+			            <label for="date" class="col-md-offset-2 col-md-4 detail-label">Today's Date</label>
+			          </div>
+			          <div class="row">
+			            <input type="text" name="group" class="student-details col-md-offset-1 col-md-4" />
+			            <input type="text" name="date" placeholder="MM/YYYY" id="date" class="student-details col-md-offset-2 col-md-4" />
+			          </div>
+			          <span class="triangle tri-2"></span>
+			        </div>
+			        <div class="container-fluid">
+			          <div class="row">
+			            <div id="all-questions" class="all-questions col-md-10 col-md-offset-1">
+			              <h2 class="questions-heading"> <i class="material-icons heading-icon">comment</i> Assessment Questionnaire</h2>
+			              <div id="section-one" class="section collapsed">
+			                <h3 id="heading-one" class="heading one">Self Awareness & Self-Esteem<span class="glyphicon glyphicon-chevron-down"></span></h3>
+			                <div class="question">
+			                  <h4>1. Personal Appearance</h4>
+			                  <h5>
+			                Are they able to identify at least three features of their personal appearance e.g. colour hair, colour eyes, height, clothing?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="personal-appearance" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="personal-appearance" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="personal-appearance" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="personal-appearance" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>2. Appearance of Others</h4>
+			                  <h5>
+			                Are they able to identify at least three features of others’ personal appearance e.g. colour hair, colour eyes, height, clothing?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="appearance-others" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="appearance-others" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="appearance-others" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="appearance-others" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>3. Likes</h4>
+			                  <h5>
+			                Can they identify at least three things that they like?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="likes" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="likes" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="likes" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="likes" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>4. Dislikes</h4>
+			                  <h5>
+			                Can they identify at least three things that they dislike?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="dislikes" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="dislikes" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="dislikes" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="dislikes" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>5. Strengths</h4>
+			                  <h5>
+			                Can they identify something that they feel they are good at?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="strengths" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="strengths" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="strengths" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="strengths" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			              </div>
+			              <div id="section-two" class="section collapsed">
+			                <h3 id="heading-two" class="heading two">Managing Feelings<span class="glyphicon glyphicon-chevron-down"></span></h3>
+			                <div class="question">
+			                  <h4>1. Identify Emotions in Self</h4>
+			                  <h5>
+			                Are they able to identify how they are feeling in different scenarios?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="identify-emotions-self" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-emotions-self" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-emotions-self" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-emotions-self" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>2. Identify Emotions in Others</h4>
+			                  <h5>
+			                Are they able to identify how others might be feelings in different scenarios?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="identify-emotions-others" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-emotions-others" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-emotions-others" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-emotions-others" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>3. Bodily Reactions to Emotions</h4>
+			                  <h5>
+			                Can they explain how their body reacts when they feel different emotions e.g. when they are nervous their palms might sweat, they might go red, they might fidget?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="bodily-reaction-emotions" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="bodily-reaction-emotions" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="bodily-reaction-emotions" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="bodily-reaction-emotions" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>4. Identifies Appropriate Responses to Emotions</h4>
+			                  <h5>
+			                Are they able to react appropriately to different emotions e.g. can they calm themselves down when they feel angry?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="identify-response-emotions" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-response-emotions" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-response-emotions" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-response-emotions" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>5. Follow a Plan to Respond to Emotions</h4>
+			                  <h5>
+			                Can they appropriately follow a plan that they make to deal with a certain emotion e.g. breathe, count to ten and then talk to someone if they feel angry?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="plan-respond-emotions" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="plan-respond-emotions" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="plan-respond-emotions" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="plan-respond-emotions" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			              </div>
+			              <div id="section-three" class="section collapsed">
+			                <h3 id="heading-three" class="heading three">Non-Verbal Communication<span class="glyphicon glyphicon-chevron-down"></span></h3>
+			                <div class="question">
+			                  <h4>1. Good Eye Contact</h4>
+			                  <h5>
+			                Do they follow the good eye contact rule when they talk to others?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="good-eye-contact" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-eye-contact" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-eye-contact" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-eye-contact" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>2. Good Distance/Touch</h4>
+			                  <h5>
+			                Do they display appropriate distance and touch when they speak to someone?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="good-distance-touch" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-distance-touch" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-distance-touch" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-distance-touch" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>3. Identify Facial Expressions</h4>
+			                  <h5>
+			                Are they able to identify a range of different facial expressions in others?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="identify-expressions" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-expressions" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-expressions" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="identify-expressions" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>4. Identifies 'Good Body Language' in Self</h4>
+			                  <h5>
+			                Can they identify when they are displaying good body language e.g. good distance, good touch and good eye contact?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="body-language-self" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="body-language-self" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="body-language-self" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="body-language-self" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>5. Identifies 'Good Body Language' in Others</h4>
+			                  <h5>
+			                Can they identify when others are displaying good body language e.g. good distance, good touch and good eye contact?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="body-language-others" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="body-language-others" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="body-language-others" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="body-language-others" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			              </div>
+			              <div id="section-four" class="section collapsed">
+			                <h3 id="heading-four" class="heading four">Verbal Communication<span class="glyphicon glyphicon-chevron-down"></span></h3>
+			                <div class="question">
+			                  <h4>1. Good Volume</h4>
+			                  <h5>
+			                Do they speak with good volume, i.e. not too loudly or quietly?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="good-volume" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-volume" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-volume" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-volume" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>2. Good Pace</h4>
+			                  <h5>
+			                Do they speak with good pace, i.e. not too quickly or slowly?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="good-pace" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-pace" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-pace" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="good-pace" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>3. Clarity</h4>
+			                  <h5>
+			                Is their speech clear to others?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="clear-speech" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="clear-speech" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="clear-speech" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="clear-speech" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>4. Relevance</h4>
+			                  <h5>
+			                Do they always speak with relevance in a conversation?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="speak-with-relevance" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="speak-with-relevance" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="speak-with-relevance" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="speak-with-relevance" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>5. Identifies 'Good Speaking Rules'</h4>
+			                  <h5>
+			                Are they able to identify how good speech sounds e.g. good volume, good pace, good clarity?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="indentify-good-speech" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="indentify-good-speech" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="indentify-good-speech" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="indentify-good-speech" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			              </div>
+			              <div id="section-five" class="section collapsed">
+			                <h3 id="heading-five" class="heading five">Planning and Problem Solving<span class="glyphicon glyphicon-chevron-down"></span></h3>
+			                <div class="question">
+			                  <h4>1. Thinks before Reacting</h4>
+			                  <h5>
+			                Do they always think before they react to a problem in school?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="think-before-react" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="think-before-react" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="think-before-react" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="think-before-react" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>2. Identifies Problems</h4>
+			                  <h5>
+			                Do they understand when problems have occurred e.g. a fall out on the playground, an unforeseen change to timetabling, difficulties with peers’ friendships.
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="understand-problems-occurred" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="understand-problems-occurred" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="understand-problems-occurred" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="understand-problems-occurred" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>3. Identifies Examples of 'Good Problem Solving'</h4>
+			                  <h5>
+			                Can they identify situations in which problems were solved appropriately?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="problems-solved-appropriately" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="problems-solved-appropriately" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="problems-solved-appropriately" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="problems-solved-appropriately" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>4. Devise a Plan to Solve a Problem</h4>
+			                  <h5>
+			                Can they make a plan to solve a problem that they’re involved in e.g. an approach to dealing with a change in timetabling?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="make-a-plan" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="make-a-plan" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="make-a-plan" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="make-a-plan" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>5. Implement a Plan to Solve a Problem</h4>
+			                  <h5>
+			                Can they follow a plan that they have devised to solve a problem that they’re involved in?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="follow-a-plan" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="follow-a-plan" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="follow-a-plan" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="follow-a-plan" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			              </div>
+			              <div id="section-six" class="section collapsed">
+			                <h3 id="heading-six" class="heading six">Relationships, Leaderships and Assertiveness<span class="section-six glyphicon glyphicon-chevron-down"></span></h3>
+			                <div class="question">
+			                  <h4>1. Built and Maintained One Friendship</h4>
+			                  <h5>
+			                Do they have one school-based relationship with a peer that could be termed a friendship?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="built-one-friendship" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="built-one-friendship" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="built-one-friendship" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="built-one-friendship" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>2. Built and Maintained Multiple Friendships</h4>
+			                  <h5>
+			                Do they have more than one school-based relationship with a peer that could be termed a friendship?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="built-multiple-friendships" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="built-multiple-friendships" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="built-multiple-friendships" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="built-multiple-friendships" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>3. Express Thoughts and Feelings to Others</h4>
+			                  <h5>
+			                Are they able to tell others how they think and feel in an appropriate way in different situations?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="express-thoughts-to-others" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="express-thoughts-to-others" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="express-thoughts-to-others" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="express-thoughts-to-others" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>4. Disagree with Others</h4>
+			                  <h5>
+			                Can they appropriately say that they disagree with others’ opinions?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="disagree-with-others" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="disagree-with-others" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="disagree-with-others" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="disagree-with-others" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			                <div class="question">
+			                  <h4>5. Apologise Appropriately</h4>
+			                  <h5>
+			                Can they say sorry appropriately when it is expected of them?
+			              </h5>
+			                  <div class="answers">
+			                    <label>
+			                      <input type="radio" name="apologise-appropriately" value="3" class="always" />
+			                      <img src="./assets/face-always.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="apologise-appropriately" value="2" class="sometimes" />
+			                      <img src="./assets/face-sometimes.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="apologise-appropriately" value="1" class="rarely" />
+			                      <img src="./assets/face-rarely.svg" />
+			                    </label>
+			                    <label>
+			                      <input type="radio" name="apologise-appropriately" value="0" class="never" />
+			                      <img src="./assets/face-never.svg" />
+			                    </label>
+			                  </div>
+			                </div>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			        <div class="row">
+			          <button class="button btn btn-primary submit col-md-offset-9 col-md-2" type="submit">Submit</button>
+			        </div>
+			      </div>
+			    </form>
+			  </div>
+
+			  <div id="wheel" class="wheel">
+			    <div class="buttons">
+			      <button id="new-form" class="button hidden btn btn-info">Start Again</button>
+			      <a id="pdf" class="button inactive hidden btn btn-info" href="./skills-wheel.pdf" download target="_blank">Download as PDF</a>
+			    </div>
+			    <div id="wheel-container" class="wheel-container"></div>
+			  </div>
+			</body>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
