@@ -213,3 +213,14 @@ label > input:checked + img {
   -moz-box-shadow: 0 0 5px 1px rgba(255, 0, 0, 1);
   box-shadow: 0 0 5px 1px rgba(255, 0, 0, 1);
 }
+
+.required {
+  color: red;
+  font-size: 2em;
+  text-align: right;
+}
+
+.required > i {
+  position: relative;
+  top: 2px;
+}
