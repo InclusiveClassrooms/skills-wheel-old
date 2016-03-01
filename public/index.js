@@ -7,11 +7,16 @@ var questions = ["personal-appearance","appearance-others","likes","dislikes","s
 form.addEventListener('submit', function(e){
   e.preventDefault();
   $('.unanswered').removeClass('unanswered');
+  if ($(".active")[0]){
+    location.href = '#ta-form';
+  }
+  $(".active").removeClass("active");
+  $(".section").addClass("collapsed");
+  $('.required').removeClass('hidden');
   if (allFilled()) {
+    $('.required').addClass('hidden');
     getAnswers(e.target);
-    $(".active").removeClass("active");
-    $(".section").addClass("collapsed");
-    sendRequest("https://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", 'null=null&' + $(form).serialize());
+    sendRequest("https://script.google.com/macros/s/AKfycbxzdgBRvWFf9CDWjZ4M8VyGlYyMwL3ScEFY9ukqw9xntvV2cQI3/exec", 'null=null&' + $(form).serialize() + '&null=null');
     sendRequest("https://inclusive-classrooms.herokuapp.com/redis", $(form).serializeArray());
   }
 });
