@@ -14,16 +14,23 @@ function drawWheel(formAnswers) {
   var oneSliceWidth = (360 * (Math.PI / 180) / 32); // converted from degrees to radians
 
   var childDetails = ['Teaching Assistant',  'Student', 'School', 'School Year', 'Group', 'Date'];
-  formAnswers.forEach(function(el, index){
-    if (index < 6){
-      det.attr("width", 250).attr("height", 250)
+
+  for (var i = 0; i < 12; i++) {
+    if (i % 2 === 0){
+      det.attr("width", 250).attr("height", 500)
       .append("text")
       .attr('x', 0)
-      .attr('y', 100 + index * 20)
-      .text(childDetails[index] + ':  ' + el.answer)
+      .attr('y', 100 + i * 20)
+      .text(childDetails[Math.floor(i/2)] + ':')
+    } else {
+      det.attr("width", 250).attr("height", 500)
+      .append("text")
+      .attr('x', 0)
+      .attr('y', 100 + i * 20)
+      .text(formAnswers[Math.floor(i/2)].answer)
       .style("font-weight", "bold");
     }
-  });
+  };
 
   // Draw the outer text in a circle
   for (var m = 0; m < 6; m++) {
