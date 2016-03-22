@@ -153,6 +153,7 @@ label > input:checked + img {
   -webkit-filter: none;
   -moz-filter: none;
   filter: none;
+  background: rgb(234, 130, 75);
   background-color: rgba(234, 92, 55, 0.4);
   border-radius: 50%;
 }
